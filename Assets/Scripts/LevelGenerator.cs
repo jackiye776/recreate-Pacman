@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    public GameObject outsideCorner;
+    public GameObject outsideWall;
+    public GameObject insideCorner;
+    public GameObject insideWall;
+    public GameObject standardPallet;
+    public GameObject powerPallet;
+    public GameObject tJunction;
+
     // 14 columns * 15 rows = 210 tiles
     int[,] levelMap =
     {
@@ -27,18 +35,26 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-
         for (int row = 0; row < 15; row++) 
         { 
             for (int col = 0; col < 14; col++)
             {
-                Instantiate(cube, new Vector3(row, -col, 0), Quaternion.identity);
+                if (levelMap[row, col] != 0)
+                {
+                    GameObject tile = GameObject.FindWithTag(levelMap[row, col] + "");
+                    if (tile != null)
+                    {
+                        Instantiate(tile, new Vector3(col, -row, 0), Quaternion.identity);
+                        Debug.Log("Instantiated: " + tile);
+                    } 
+                    
+                }
                 Debug.Log("Row: " + row + " || Column: " + col + " || Tile Number: " + levelMap[row, col]);
             }
         }
 
+        // Set all game object of the levelManager after instantiating the map
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
