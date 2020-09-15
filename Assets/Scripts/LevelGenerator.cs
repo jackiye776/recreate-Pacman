@@ -12,6 +12,8 @@ public class LevelGenerator : MonoBehaviour
     public GameObject powerPallet; // 6
     public GameObject tJunction; // 7
 
+    public GameObject levelParent;
+
     // 14 columns * 15 rows = 210 tiles
     int[,] levelMap =
     {
@@ -43,8 +45,10 @@ public class LevelGenerator : MonoBehaviour
                 if (tileNum != 0) // checks if its not 0 (empty tile)
                 {
                     GameObject tile = GameObject.FindWithTag(tileNum + "");
-                    GameObject rotateTile = GameObject.Instantiate(tile, new Vector3(col, -row, 0), Quaternion.identity);
-                    
+                    GameObject rotateTile = GameObject.Instantiate(tile, new Vector2(col, -row), Quaternion.identity);
+
+                    rotateTile.transform.parent = levelParent.transform;
+
                     int rotNum = 0; // store z value for rotating
 
                     // Rotating outside corners
@@ -100,16 +104,21 @@ public class LevelGenerator : MonoBehaviour
                         }
                         
                     }
-
-                    Debug.Log("Instantiated: " + tile);
-
+                    //Debug.Log("Instantiated: " + tile);
                 }
-                Debug.Log("Row: " + row + " || Column: " + col + " || Tile Number: " + levelMap[row, col]);
+                //Debug.Log("Row: " + row + " || Column: " + col + " || Tile Number: " + levelMap[row, col]);
             }
         }
+        // Deactive all LevelSprites game objects in LevelManager after instantiating 
+        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        //Debug.Log(gameObject.transform.childCount);
 
-        // Set all game object of the levelManager after instantiating the map
-        gameObject.SetActive(false);
+        // Instantiate the rest of the grids. Place within the LevelManager as a child. 
+        // y is EITHER 27 / 28 !!!
+        GameObject.Instantiate(gameObject.transform.GetChild(1), new Vector2(27, 0), Quaternion.Euler(0, 180, 0), gameObject.transform.GetChild(1).parent);
+        GameObject.Instantiate(gameObject.transform.GetChild(1), new Vector2(27, -27), Quaternion.Euler(-180, 180, 0), gameObject.transform.GetChild(1).parent);
+        GameObject.Instantiate(gameObject.transform.GetChild(1), new Vector2(0, -27), Quaternion.Euler(-180, 0, 0), gameObject.transform.GetChild(1).parent);
+
     }
 
     // Update is called once per frame
