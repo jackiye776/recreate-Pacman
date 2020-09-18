@@ -101,10 +101,10 @@ TextureImporter:
       name: Ghost_RecoverState_0
       rect:
         serializedVersion: 2
-        x: 176
-        y: 672
-        width: 160
-        height: 192
+        x: 44
+        y: 168
+        width: 40
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,10 +122,10 @@ TextureImporter:
       name: Ghost_RecoverState_1
       rect:
         serializedVersion: 2
-        x: 688
-        y: 672
-        width: 160
-        height: 192
+        x: 172
+        y: 168
+        width: 40
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,10 +143,10 @@ TextureImporter:
       name: Ghost_RecoverState_2
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 688
-        width: 160
-        height: 192
+        x: 300
+        y: 172
+        width: 40
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,10 +164,10 @@ TextureImporter:
       name: Ghost_RecoverState_3
       rect:
         serializedVersion: 2
-        x: 176
-        y: 160
-        width: 160
-        height: 192
+        x: 44
+        y: 40
+        width: 40
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
