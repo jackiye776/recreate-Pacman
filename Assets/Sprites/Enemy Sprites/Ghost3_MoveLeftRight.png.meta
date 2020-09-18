@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 0d3546037f207434186997999dbee2b9
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3240498338750198049
+    second: Ghost3_MoveLeftRight_0
+  - first:
+      213: 8670319700850945116
+    second: Ghost3_MoveLeftRight_1
+  - first:
+      213: -7427206414284029992
+    second: Ghost3_MoveLeftRight_2
+  - first:
+      213: -4464703821576506161
+    second: Ghost3_MoveLeftRight_3
+  - first:
+      213: 461120633645194309
+    second: Ghost3_MoveLeftRight_4
+  - first:
+      213: 523846633906220633
+    second: Ghost3_MoveLeftRight_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -84,7 +102,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ghost3_MoveLeftRight_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 168
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121f278f11098fc20800000000000000
+      internalID: 3240498338750198049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost3_MoveLeftRight_1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 168
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5caa42a4d9235870800000000000000
+      internalID: 8670319700850945116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost3_MoveLeftRight_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 168
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dff8130e134de890800000000000000
+      internalID: -7427206414284029992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost3_MoveLeftRight_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 40
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc47a9f778f2a02c0800000000000000
+      internalID: -4464703821576506161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost3_MoveLeftRight_4
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 40
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c560fe5ca366600800000000000000
+      internalID: 461120633645194309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost3_MoveLeftRight_5
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 40
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ea3c2fcb3154700800000000000000
+      internalID: 523846633906220633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

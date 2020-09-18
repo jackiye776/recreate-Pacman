@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 1eb37b0b9bb0e2c43aec3e78027b4f17
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3044474066607738615
+    second: Ghost_DeathState_0
+  - first:
+      213: -1326118017055737015
+    second: Ghost_DeathState_1
+  - first:
+      213: -7035259806549469621
+    second: Ghost_DeathState_2
+  - first:
+      213: 90554176049261826
+    second: Ghost_DeathState_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -84,7 +96,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ghost_DeathState_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 184
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe0b048805204a20800000000000000
+      internalID: 3044474066607738615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_DeathState_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 184
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bb52780bea89de0800000000000000
+      internalID: -1326118017055737015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_DeathState_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 184
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b461908fa7cbd5e90800000000000000
+      internalID: -7035259806549469621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_DeathState_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 56
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d28581b86b14100800000000000000
+      internalID: 90554176049261826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
