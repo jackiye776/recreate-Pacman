@@ -19,5 +19,4 @@ public class PlayerTween
         this.Duration = duration;
     }
 
-
 }

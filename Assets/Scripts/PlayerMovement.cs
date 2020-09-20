@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Animator moveDown;
-    public Animator moveLeftRight;
-    public Animator moveUp;
-
-    public AudioSource walkSFX;
+    public Animator animatorController;
 
     [SerializeField]
     private GameObject player;
@@ -18,16 +14,18 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(activeTween);
+        
         AddPlayerTween();
         if (activeTween != null)
         {
+            checkDirection(); // Controls animator
+
             // Cubic easing-in interpolation
             float time = (Time.time - activeTween.StartTime) / activeTween.Duration;
             float timeFraction = time * time * time;
@@ -40,43 +38,66 @@ public class PlayerMovement : MonoBehaviour
                 activeTween.Target.transform.position = Vector3.Lerp(activeTween.StartPos, activeTween.EndPos, timeFraction);
             }
             if (dist < 0.1f)
-            {
+            {         
                 activeTween.Target.position = activeTween.EndPos;
                 activeTween = null;
             }
 
         }
 
-        // Get position of player
-        pos = player.transform.position;
-
+        pos = player.transform.position; // Get position of player
     }
+
     public void AddPlayerTween()
     {
         if (activeTween == null)
         {
-            if (pos.x == 6 && pos.y == -1)
+            if (pos.x == 6 && pos.y == -1) // Move Down
             {
-                activeTween = new PlayerTween(player.transform, player.transform.position, new Vector3(6.0f, -5.0f, 0.0f), Time.time, 1.0f);
+                activeTween = new PlayerTween(player.transform, player.transform.position, new Vector3(6.0f, -5.0f, 0.0f), Time.time, 1.5f);
             }
 
-            if (pos.x == 6 && pos.y == -5)
+            if (pos.x == 6 && pos.y == -5) // Move Left
             {
-                activeTween = new PlayerTween(player.transform, player.transform.position, new Vector3(1.0f, -5.0f, 0.0f), Time.time, 1.0f);
+                activeTween = new PlayerTween(player.transform, player.transform.position, new Vector3(1.0f, -5.0f, 0.0f), Time.time, 1.5f);
             }
 
-            if (pos.x == 1 && pos.y == -5)
+            if (pos.x == 1 && pos.y == -5) // Move Up
             {
-                activeTween = new PlayerTween(player.transform, player.transform.position, new Vector3(1.0f, -1.0f, 0.0f), Time.time, 1.0f);
+                activeTween = new PlayerTween(player.transform, player.transform.position, new Vector3(1.0f, -1.0f, 0.0f), Time.time, 1.5f);
             }
 
-            if (pos.x == 1 && pos.y == -1)
+            if (pos.x == 1 && pos.y == -1) // Move Right
             {
-                activeTween = new PlayerTween(player.transform, player.transform.position, new Vector3(6.0f, -1.0f, 0.0f), Time.time, 1.0f);
+                activeTween = new PlayerTween(player.transform, player.transform.position, new Vector3(6.0f, -1.0f, 0.0f), Time.time, 1.5f);
             }
-
-
         }
     }
+
+    public void checkDirection()
+    {
+        if (pos.y > activeTween.EndPos.y) // Down
+        {
+            animatorController.SetInteger("Move", 3);
+        }
+
+        if (pos.x > activeTween.EndPos.x) // Left
+        {
+            animatorController.SetInteger("Move", 0);
+            activeTween.Target.transform.localScale = new Vector3(-2.2f, 2.2f, 0);
+        }
+
+        if (pos.y < activeTween.EndPos.y) // Up
+        {
+            animatorController.SetInteger("Move", 1);
+            activeTween.Target.transform.localScale = new Vector3(2.2f, 2.2f, 0);
+        }
+
+        if (pos.x < activeTween.EndPos.x) // Down
+        {
+            animatorController.SetInteger("Move", 2);
+        }
+    }
+
 }
 
