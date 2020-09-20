@@ -106,6 +106,7 @@ public class LevelGenerator : MonoBehaviour
                 //Debug.Log("Row: " + row + " || Column: " + col + " || Tile Number: " + levelMap[row, col]);
             }
         }
+
         // Deactive all LevelSprites game objects in LevelManager after instantiating 
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         

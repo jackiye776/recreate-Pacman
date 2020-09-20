@@ -12,13 +12,14 @@ public class MusicManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Plays intro music
         audioSource.Play();
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Plays ghost normal state music
         if (!audioSource.isPlaying)
         {
             audioSource.clip = ghostNormalMusic;
