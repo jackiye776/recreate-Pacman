@@ -23,7 +23,25 @@ public class UIManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene(0);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
+
+    public void QuitGame()
+    {
+        Destroy(gameObject);
+        SceneManager.LoadScene(1);
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.buildIndex == 0)
+        {
+            Debug.Log("QUIT PRESSED?");
+            Button button = GameObject.FindGameObjectWithTag("QuitGame").GetComponent<Button>();
+            button.onClick.AddListener(QuitGame);
+        }
+    }
+
 
 
 }

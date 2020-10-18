@@ -11,6 +11,7 @@ TagManager:
   - 5
   - 6
   - 7
+  - QuitGame
   layers:
   - Default
   - TransparentFX
