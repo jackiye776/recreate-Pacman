@@ -36,7 +36,6 @@ public class UIManager : MonoBehaviour
     {
         if(scene.buildIndex == 0)
         {
-            Debug.Log("QUIT PRESSED?");
             Button button = GameObject.FindGameObjectWithTag("QuitGame").GetComponent<Button>();
             button.onClick.AddListener(QuitGame);
         }
